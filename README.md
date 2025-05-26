@@ -1,5 +1,8 @@
 # 🌯 starboard-wrap
+
 A small library that wraps a Starboard Notebook iframe in the parent webpage.
+
+> this fork contains a few changes that allowed me to build the package myself and serve it through GitHub rather than a different CDN
 
 ## What?
 
