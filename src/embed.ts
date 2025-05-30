@@ -177,6 +177,9 @@ export class StarboardEmbed extends HTMLElement {
       this.iFrame.allow = this.options.allow;
     }
 
+// @ts-ignore TS2339 there *is* a property called "loading"
+    this.iFrame.loading = 'lazy'
+
     // Without this check it will reload the page
     if (this.iFrame.src !== this.options.src) {
       this.iFrame.src = this.options.src;
