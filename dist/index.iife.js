@@ -125,13 +125,13 @@ var starboardWrap = (function (exports) {
             }
             this.iFrame.frameBorder = "0";
             this.iFrameMessageHandler = async (ev) => {
-                var _a;
+                var _a, _b;
                 if (ev.source === null || ev.source !== ((_a = this.iFrame) === null || _a === void 0 ? void 0 : _a.contentWindow))
                     return;
                 const options = this.options;
                 if (!options)
                     return;
-                const checkOrigin = [new URL(options.src, location.origin).origin];
+                const checkOrigin = [new URL(options.src, (_b = location.origin) !== null && _b !== void 0 ? _b : undefined).origin];
                 if (!checkOrigin.includes(ev.origin))
                     return;
                 if (!ev.data)
