@@ -192,7 +192,7 @@ export class StarboardEmbed extends HTMLElement {
       const options = this.options;
       if (!options) return;
 
-      const checkOrigin = [new URL(options.src, location.origin ?? options.src).origin];
+      const checkOrigin = [new URL(options.src, location.origin === 'null' ? undefined : location.origin).origin];
       if (!checkOrigin.includes(ev.origin)) return;
 
       if (!ev.data) return;
