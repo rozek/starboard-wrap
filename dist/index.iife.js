@@ -131,7 +131,7 @@ var starboardWrap = (function (exports) {
                 const options = this.options;
                 if (!options)
                     return;
-                const checkOrigin = [new URL(options.src, (_b = location.origin) !== null && _b !== void 0 ? _b : undefined).origin];
+                const checkOrigin = [new URL(options.src, (_b = location.origin) !== null && _b !== void 0 ? _b : options.src).origin];
                 if (!checkOrigin.includes(ev.origin))
                     return;
                 if (!ev.data)
